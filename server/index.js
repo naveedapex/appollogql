@@ -13,6 +13,7 @@ const typeDefs = gql`
  
   type Query {
     books: [Book]
+    getAllMessages: String
   }
 `;
 
@@ -32,6 +33,7 @@ const books = [
   const resolvers = {
     Query: {
       books: () => books,
+      getAllMessages: () => 'All my Messages'
     },
   };
 
